@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram Feed by Antonio Barroso</title>
+  </head>
+  <body>
+    <!-- <div id="app"></div> -->
+    <div class="container">
+      <nav class="navbar bg-body-tertiary mb-5 px-5">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/014/414/683/non_2x/instagram-black-logo-on-transparent-background-free-vector.jpg"
+            alt="Logo"
+            width="30"
+            height="24"
+            class="d-inline-block align-text-top"
+          />
+          Instagram
+        </a>
+        <form class="d-flex gap-2 me-5" role="search">
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-success"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Create a new post
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Create a new post
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div class="form-floating">
+                    <h6>Caption:</h6>
+                    <textarea
+                      class="form-control p-1 mb-2"
+                      placeholder="Add the caption of your post"
+                      id="floatingTextarea"
+                    >
+                    </textarea>
+                    <button
+                      type="button"
+                      class="btn btn-light btn-sm border border-light-subtle"
+                    >
+                      <i class="fa-solid fa-camera"></i>
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-light btn-sm border border-light-subtle"
+                    >
+                      <i class="fa-solid fa-location-dot"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-success">Publish</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fa-solid fa-gear"></i>
+            </button>
+            <ul class="dropdown-menu me-5">
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Accesibility</a></li>
+              <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item text-danger" href="#">Log out</a>
+              </li>
+            </ul>
+          </div>
+        </form>
+      </nav>
+      <ul
+        class="nav nav-pills mb-3 justify-content-center"
+        id="pills-tab"
+        role="tablist"
+      >
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="grid-panel-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#grid-panel"
+            type="button"
+            role="tab"
+            aria-controls="grid-panel"
+            aria-selected="true"
+          >
+            <i class="fa-solid fa-table-cells"></i>
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="column-panel-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#column-panel"
+            type="button"
+            role="tab"
+            aria-controls="column-panel"
+            aria-selected="false"
+          >
+            <i class="fa-solid fa-square"></i>
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content" id="pills-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="grid-panel"
+          role="tabpanel"
+          aria-labelledby="grid-panel-tab"
+          tabindex="0"
+        >
+          <div class="row">
+            <img
+              src="https://fullertontitans.com/images/2025/3/15/25_NCAA_NatChamp_D1_1702_91__usiE3.jpg"
+              class="img-fluid mb-2 col-4"
+              alt="..."
+              style="height: 375px"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG11c2ljfGVufDB8fDB8fHww"
+              class="img-fluid mb-2 col-4"
+              alt="..."
+              style="height: 375px"
+            />
+            <img
+              src="https://m.media-amazon.com/images/I/51F6Kf95JTL._UF894,1000_QL80_.jpg"
+              class="img-fluid mb-2 col-4"
+              alt="..."
+              style="height: 375px"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1560343776-97e7d202ff0e?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bWFydmVsfGVufDB8fDB8fHww"
+              class="img-fluid mb-2 col-4"
+              alt="..."
+              style="height: 375px"
+            />
+            <img
+              src="https://i.scdn.co/image/ab6761610000e5ebf9cf783eb03eb66aa43943ba"
+              class="img-fluid mb-2 col-4"
+              alt="..."
+              style="height: 375px"
+            />
+            <img
+              src="https://imagenes.20minutos.es/files/image_990_556/uploads/imagenes/2018/07/11/742986.jpg"
+              class="img-fluid mb-2 col-4"
+              alt="..."
+              style="height: 375px"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1512145000725-7a38e52ab8d5?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHBpdHRzYnVyZ2glMjBzdGVlbGVyc3xlbnwwfHwwfHx8MA%3D%3D"
+              class="img-fluid mb-2 col-4"
+              alt="..."
+              style="height: 375px"
+            />
+            <img
+              src="https://www.fivb.com/wp-content/uploads/2020/03/90596-scaled.jpg"
+              class="img-fluid mb-2 col-4"
+              alt="..."
+              style="height: 375px"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1564865878688-9a244444042a?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29kZXxlbnwwfHwwfHx8MA%3D%3D"
+              class="img-fluid mb-2 col-4"
+              alt="..."
+              style="height: 375px"
+            />
+            <img
+              src="https://img.europapress.es/fotoweb/fotonoticia_20240213094852_690.jpg"
+              class="img-fluid mb-2 col-4"
+              alt="..."
+              style="height: 375px"
+            />
+            <img
+              src="https://ca-times.brightspotcdn.com/dims4/default/9c1950b/2147483647/strip/true/crop/8016x5344+0+0/resize/1200x800!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F32%2F6e%2F23456fb07e9ab77eeed44e0f01b0%2Fc5bba463e1b143f78185ff7a9a8e34f9"
+              class="img-fluid mb-2 col-4"
+              alt="..."
+              style="height: 375px"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1584770557404-a5d2a798e81a?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bmJhfGVufDB8fDB8fHww"
+              class="img-fluid mb-2 col-4"
+              alt="..."
+              style="height: 375px"
+            />
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="column-panel"
+          role="tabpanel"
+          aria-labelledby="column-panel-tab"
+          tabindex="0"
+        >
+          <div class="container w-50 border px-0 mb-3 rounded">
+            <div class="d-flex justify-content-between p-2">
+              <h5>Abel Jordan</h5>
+              <span>03/20</span>
+            </div>
+            <img
+              src="https://fullertontitans.com/images/2025/3/15/25_NCAA_NatChamp_D1_1702_91__usiE3.jpg"
+              class="img-fluid mb-2 object-fit-cover col-12"
+              alt="..."
+              style="height: 500px"
+            />
+            <strong class="p-2">2564 likes</strong>
+            <p class="p-2 pb-0 mb-0">
+            Congratulations to Abel Jordan on receiving his third career MPSF Men's Athlete of the Week award!</p>
+            <p class="px-2 my-0">
+            Jordan clinched first place finishes at the Silver State Invitational in the men's 60m hurdles final and men's 60m dash final.</p>
+            <p class="px-2 my-0">
+            The Madrid, Spain native ran a 6.65 in the 60m dash to hold the second fastest time among all Division I runners so far this season behind Penn State's Ajani Dwyer (6.55).</p>
+            <p class="px-2 mt-0">He clocked a 7.86 in the men's 60m hurdles final after taking first in the preliminary round with a time of 7.82.</p>
+          </div>
+          <div class="container w-50 border px-0 mb-3 rounded">
+            <div class="d-flex justify-content-between p-2">
+              <h5>Baby Groot</h5>
+              <span>03/15</span>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1560343776-97e7d202ff0e?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bWFydmVsfGVufDB8fDB8fHww"
+              class="img-fluid mb-2 object-fit-cover col-12"
+              alt="..."
+              style="height: 500px"
+            />
+            <strong class="p-2">4156 likes</strong>
+            <p class="p-2">
+            Cuando la jornada se pone intensa, pero tú solo estás pensando en salvar la galaxia... o en una siestita
+            Baby Groot siempre con esa carita de "yo no fui".
+            Dale un toque geek a tu escritorio con este pequeño guardián que derrite corazones
+            </p>
+          </div>
+          <div class="container w-50 border px-0 mb-3 rounded">
+            <div class="d-flex justify-content-between p-2">
+              <h5>Mago de Öz</h5>
+              <span>03/18</span>
+            </div>
+            <img
+              src="https://m.media-amazon.com/images/I/51F6Kf95JTL._UF894,1000_QL80_.jpg"
+              class="img-fluid mb-2 object-fit-cover col-12"
+              alt="..."
+              style="height: 500px"
+            />
+            <strong class="p-2">1028 likes</strong>
+            <p class="p-2">
+            Hechizos, pócimas y brujería es el noveno álbum de estudio de la banda Mägo de Oz, siendo este el primero con Zeta como vocalista. Este fue publicado después de la polémica salida de su anterior cantante, José Andrëa. La gira para la presentación de este álbum fue Brujería, brujería Tour 2013.
+            </p>
+          </div>
+          <div class="container w-50 border px-0 mb-3 rounded">
+            <div class="d-flex justify-content-between p-2">
+              <h5>Neon Lights</h5>
+              <span>03/14</span>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG11c2ljfGVufDB8fDB8fHww"
+              class="img-fluid mb-2 object-fit-cover col-12"
+              alt="..."
+              style="height: 500px"
+            />
+            <strong class="p-2">126 likes</strong>
+            <p class="p-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Architecto, consequuntur aliquid tenetur nemo, voluptates
+              perferendis eius provident, ducimus eveniet quam ut!
+              Necessitatibus, voluptas nostrum? Voluptatem molestiae natus
+              aliquid amet quia.
+            </p>
+          </div>
+          <div class="container w-50 border px-0 mb-3 rounded">
+            <div class="d-flex justify-content-between p-2">
+              <h5>Teddy Swims</h5>
+              <span>03/12</span>
+            </div>
+            <img
+              src="https://i.scdn.co/image/ab6761610000e5ebf9cf783eb03eb66aa43943ba"
+              class="img-fluid mb-2 object-fit-cover col-12"
+              alt="..."
+              style="height: 500px"
+            />
+            <strong class="p-2">24549 likes</strong>
+            <p class="p-2">
+            Teddy Swims ha llegado para quedarse. El año pasado fue clave para su evolución como artista y consiguió meterse en la mejor variedad musical con su canción 'Lose Control'. Se ha llenado de premios y reconocimientos y vamos a hablar de los últimos. El artista se llevó dos trofeos en los 'Billboard Music Awards' de 2024: 'Top Hot 100 Song' y 'Top Radio Song' por ese 'Lose Control' que pudimos escuchar en la gala en directo.
+            </p>
+          </div>
+          <div class="container w-50 border px-0 mb-3 rounded">
+            <div class="d-flex justify-content-between p-2">
+              <h5>Muse</h5>
+              <span>03/09</span>
+            </div>
+            <img
+              src="https://imagenes.20minutos.es/files/image_990_556/uploads/imagenes/2018/07/11/742986.jpg"
+              class="img-fluid mb-2 object-fit-cover col-12"
+              alt="..."
+              style="height: 500px"
+            />
+            <strong class="p-2">3265 likes</strong>
+            <p class="p-2">
+            Muse se prepara para lanzar un nuevo disco en 2026: “En un par de meses...”
+            </p>
+          </div>
+
+          <div class="container w-50 border px-0 mb-3 rounded">
+            <div class="d-flex justify-content-between p-2">
+              <h5>Pittsburgh Steelers</h5>
+              <span>03/03/span>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1512145000725-7a38e52ab8d5?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHBpdHRzYnVyZ2glMjBzdGVlbGVyc3xlbnwwfHwwfHx8MA%3D%3D"
+              class="img-fluid mb-2 object-fit-cover col-12"
+              alt="..."
+              style="height: 500px"
+            />
+            <strong class="p-2">4651 likes</strong>
+            <p class="p-2">
+            Los Steelers padecen de algo que ya toma tintes de 'maldición' en los controles desde la salida de Ben Roethlisberger tras la campaña de 2021, pues luego de él han pasado por el puesto Kenny Pickett, Mason Rudolph, Mitch Trubitsky, Skylar Thompson y Russell Wilson, y de todos no se hizo ni la mitad de lo que requería el puesto, ni para llenar los zapatos del 'Big Ben'.
+            </p>
+          </div>
+          <div class="container w-50 border px-0 mb-3 rounded">
+            <div class="d-flex justify-content-between p-2">
+              <h5>Paula Egonu</h5>
+              <span>03/01</span>
+            </div>
+            <img
+              src="https://www.fivb.com/wp-content/uploads/2020/03/90596-scaled.jpg"
+              class="img-fluid mb-2 object-fit-cover col-12"
+              alt="..."
+              style="height: 500px"
+            />
+            <strong class="p-2">359 likes</strong>
+            <p class="p-2">
+            Egonu has been a key member of the Italian national team for almost a decade, including the European Championship in 2021 and the Nations League in 2022.
+            She also had the honour of being one of Italy flagbearers in the Opening Ceremony at Tokyo 2020.
+            Her success has not insulated her from discrimination, and she quit the national team after receiving a torrent of racist abuse on social media following Italy's 2022 World Championship semi-final exit to Brazil.
+            Egonu later reversed that decision, returning to the team in August 2023, but her bold actions sparked a debate in Italy over the issue of race in the country.
+            </p>
+          </div>
+          <div class="container w-50 border px-0 mb-3 rounded">
+            <div class="d-flex justify-content-between p-2">
+              <h5>Just Code</h5>
+              <span>02/27</span>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1564865878688-9a244444042a?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29kZXxlbnwwfHwwfHx8MA%3D%3D"
+              class="img-fluid mb-2 object-fit-cover col-12"
+              alt="..."
+              style="height: 500px"
+            />
+            <strong class="p-2">2195 likes</strong>
+            <p class="p-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Architecto, consequuntur aliquid tenetur nemo, voluptates
+              perferendis eius provident, ducimus eveniet quam ut!
+              Necessitatibus, voluptas nostrum? Voluptatem molestiae natus
+              aliquid amet quia.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/d9f56b1ac2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
